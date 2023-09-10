@@ -1,0 +1,16 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Social Network</title>
+        <link rel='stylesheet' href="{% static 'styles/main.css' %}">
+    </head>
+    <body>
+        {% include 'navbar.html' %}
+
+        {% block content %}
+        
+        {% endblock content %}
+    </body>
+</html>
