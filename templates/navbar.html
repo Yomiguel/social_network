@@ -6,4 +6,11 @@
     <input type="text" name="q" placeholder="Search"/>
 </form>
 
+{% if request.user.is_authenticated %}
+    <p>Hello {{request.user}}</p>
+    <a href="{% url 'Logout' %}">Logout</a>
+{% else %}
+    <a href="{% url 'Login' %}">Login</a>  
+{% endif %}
+
 <hr>
